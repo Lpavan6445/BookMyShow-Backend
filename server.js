@@ -50,6 +50,9 @@ const connect = () => {
 //     data: booking
 //   });
 // });
+app.get("/", (req,res)=>{
+  res.status(200).send("Server Is Working")
+})
 const locationSchema = new mongoose.Schema({
   cinemas: String,
   sub_region: String,
