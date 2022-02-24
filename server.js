@@ -247,7 +247,7 @@ app.patch("/movies/:id", async (req, res) => {
 });
 
 
-let port = 8000;
+let port =  process.env.PORT || 8000;
 const start = async () => {
   await connect();
   app.listen(port, () => {
