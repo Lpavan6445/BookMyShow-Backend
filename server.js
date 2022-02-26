@@ -14,42 +14,7 @@ const connect = () => {
     useUnifiedTopology: true,
   });
 };
-// const bookingSchema = new mongoose.Schema({
-//   movie_name: String,
-//   silver: Array,
-//   date: Number,
-//   day: String,
-//   time: String,
-//   cinemas_name: String,
-//   silver: Array,
-//   platinium: Array,
-//   price: Number,
-//   total_price: Number,
-//   banner_image_url: String,
-//   movie_grade: String
-// });
-// const Booking = mongoose.model("booking", bookingSchema);
 
-// app.post("/booking", async (req, res) => {
-//   const booking = await Booking.create(req.body); 
-//   res.status(201).json({
-//     data: booking
-//   });
-// });
-// app.get("/booking", async (req, res) => {
-//   const booking = await Booking.find({}).lean().exec();
-//   res.status(200).json({
-//     data: booking
-//   });
-// });
-// app.patch("/booking/:id", async (req, res) => {
-//   const booking = await Booking.findByIdAndUpdate(req.params.id, req.body, {
-//     new: true,
-//   });
-//   res.status(201).json({
-//     data: booking
-//   });
-// });
 app.get("/", (req,res)=>{
   res.status(200).send("Server Is Working")
 })
@@ -63,84 +28,6 @@ const locationSchema = new mongoose.Schema({
   cancellation_availability: Boolean,
 });
 
-const Location = mongoose.model("location", locationSchema);
-
-app.get("/location", async (req, res) => {
-  const locations = await Location.find({}).lean().exec();
-  res.status(200).json({
-    data: locations
-  });
-});
-const foodSchema = new mongoose.Schema({
-  food_name: String,
-  food_price: Number,
-  is_popcorn: Boolean,
-  is_coke: Boolean,
-  is_combo: Boolean,
-  food_tag: String,
-  food_image: String,
-});
-const Food = mongoose.model("food", foodSchema);
-
-app.get("/food", async (req, res) => {
-  const food = await Food.find({}).lean().exec();
-  res.status(200).json({
-    data: food
-  });
-});
-const outdoorSchema = new mongoose.Schema({
-  image: String,
-  event_name: String,
-  venue: String,
-  is_popular: Boolean,
-});
-const Outdoor = mongoose.model("outdoor", outdoorSchema);
-
-app.get("/outdoor", async (req, res) => {
-  const outdoors = await Outdoor.find({}).lean().exec();
-  res.status(200).json({
-    data: outdoors
-  });
-});
-const laughterSchema = new mongoose.Schema({
-  image: String,
-  event_name: String,
-  venue: String,
-});
-const Laughter = mongoose.model("laughter", laughterSchema);
-
-app.get("/laughter", async (req, res) => {
-  const laughters = await Laughter.find({}).lean().exec();
-  res.status(200).json({
-    data: laughters
-  });
-});
-const popularSchema = new mongoose.Schema({
-  image: String,
-  event_name: String,
-  venue: String,
-});
-const Popular = mongoose.model("popular", popularSchema);
-
-app.get("/popular", async (req, res) => {
-  const populars = await Popular.find({}).lean().exec();
-  res.status(200).json({
-    data: populars
-  });
-});
-const latestSchema = new mongoose.Schema({
-  image: String,
-  event_name: String,
-  venue: String,
-});
-const Latest = mongoose.model("latest", latestSchema);
-
-app.get("/latest", async (req, res) => {
-  const latests = await Latest.find({}).lean().exec();
-  res.status(200).json({
-    data: latests
-  });
-});
 const cinemaSchema = new mongoose.Schema({
   name: String,
   sub_region: String,
@@ -159,64 +46,67 @@ app.get("/cinema", async (req, res) => {
 const movieSchema = new mongoose.Schema({
   movie_name: {
     type: String,
-    required: true
+    required: false
   },
   cover_url: {
     type: String,
-    required: true
+    required: false
   },
   banner_url: {
     type: String,
-    required: true
+    required: false
   },
   release_date: {
     type: String,
-    required: true
+    required: false
   },
   genre: {
     type: String,
-    required: true
+    required: false
   },
   screen_types: {
     type: Array,
-    required: true
+    required: false
   },
   languages: {
     type: Array,
-    required: true
+    required: false
   },
   movie_duration: {
     type: String,
-    required: true
+    required: false
   },
   rating: {
     percentage: {
       type: Number
+      required: false
     },
     no_of_ratings: Number
+    required: false
   },
   about_movie: {
     type: String,
-    required: true
+    required: false
   },
   cast: {
     type: Array,
-    required: true
+    required: false
   },
   crew: {
     type: Array,
-    required: true
+    required: false
   },
   review: {
     type: Array,
-    required: true
+    required: false
   },
   grade: {
     type: String,
-    required: true
+    required: false
   },
   is_primier: {
     type: Boolean
+    required: false
   }
 });
 
