@@ -1,7 +1,7 @@
 {
-    "movies":[{
-          
-     "id":1,
+    "movies":[
+    {
+     "id":"621733501ffb9229e29832fc",
         "movie_name": "Wonder Woman 1984",
      "movie_grade": "UA",
      "languages": "English, Hindi, Tamil, Telugu",
@@ -221,7 +221,7 @@
      ]
     },
     {
-     "id":3,
+     "id":"621733501ffb9229e29832fe",
         "movie_name": "Chaos Walking",
      "movie_grade": "UA",
      "languages": "English",
@@ -343,7 +343,7 @@
      ]
     },
     {
-     "id":4,
+     "id":"621733501ffb9229e29832ff",
         "movie_name": "Suraj Pe Mangal Bhari",
      "movie_grade": "UA",
      "languages": "Hindi",
@@ -424,7 +424,7 @@
      ]
     },
     {
-     "id":5,
+     "id":"621733501ffb9229e2983300",
         "movie_name": "Chakra Ka Rakshak",
      "movie_grade": "UA",
      "languages": "Hindi",
@@ -510,8 +510,8 @@
      ]
     },
     {
-     "id":6,
-        "movie_name": "The Marksman",
+     "id":"621733501ffb9229e2983301",
+     "movie_name": "The Marksman",
      "movie_grade": "UA",
      "languages": "English, Hindi, Tamil, Telugu",
      "banner_image_url": "https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@heart_202006300400.png,ox-24,oy-617,ow-29:ote-NjclICA3MzMgdm90ZXM%3D,ots-29,otc-FFFFFF,oy-612,ox-70/et00307138-eghqlqudkz-portrait.jpg",
