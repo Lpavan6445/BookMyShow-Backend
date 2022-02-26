@@ -34,6 +34,7 @@ const cinemaSchema = new mongoose.Schema({
   cancellation_availability: String,
   timings: Array,
 });
+
 const Cinema = mongoose.model("cinema", cinemaSchema);
 
 app.get("/cinema", async (req, res) => {
@@ -78,10 +79,10 @@ const movieSchema = new mongoose.Schema({
   },
   rating: {
     percentage: {
-      type: Number
+      type: Number,
       required: false
     },
-    no_of_ratings: Number
+    no_of_ratings: Number,
     required: false
   },
   about_movie: {
@@ -105,7 +106,7 @@ const movieSchema = new mongoose.Schema({
     required: false
   },
   is_primier: {
-    type: Boolean
+    type: Boolean,
     required: false
   }
 });
